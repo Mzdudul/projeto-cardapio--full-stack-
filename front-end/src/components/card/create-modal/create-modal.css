@@ -1,0 +1,124 @@
+.model-backdrop {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+}
+
+.modal-content {
+  background: #ffffff;
+  color: #0f172a; /* slate-900 */
+  width: 100%;
+  max-width: 520px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.2);
+  padding: 20px 22px;
+  transform: translateY(0);
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.modal-content h2 {
+  margin: 0 0 12px 0;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.btn-close {
+  background: transparent;
+  border: none;
+  color: #0f172a;
+  font-size: 1.4rem;
+  line-height: 1;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 120ms ease, transform 120ms ease;
+}
+
+.btn-close:hover {
+  background: rgba(15,23,42,0.06);
+  transform: translateY(-1px);
+}
+
+.create-form {
+  display: grid;
+  gap: 12px;
+}
+
+.create-form label {
+  display: block;
+  font-size: 0.8rem;
+  color: #475569; /* slate-600 */
+  margin-bottom: 6px;
+}
+
+.create-form input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0; /* slate-200 */
+  background: #fbfdff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.create-form input:focus {
+  border-color: #60a5fa; /* sky-400 */
+  box-shadow: 0 0 0 4px rgba(96,165,250,0.08);
+}
+
+.btn-submit {
+  margin-top: 6px;
+  background: linear-gradient(90deg,#06b6d4,#60a5fa);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
+}
+
+.btn-submit[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(96,165,250,0.18);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    max-width: 100%;
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .create-form input {
+    padding: 10px;
+  }
+}

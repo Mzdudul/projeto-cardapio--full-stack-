@@ -18,7 +18,7 @@ function App() {
     <div className="app">
         <div className="header">
           <h1>Cardápio</h1>
-          <p className="subtitle">Selecione sua refeição favorita</p>
+          <p className="subtitle">Selecione sua o que deseja pedir!</p>
         </div>
 
       <main className="Container">

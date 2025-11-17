@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './Card.css';
 
 interface CardProps {
@@ -16,7 +17,9 @@ export function Card({ price, title, img }: CardProps) {
             <div className="card-content">
                 <div className="card-header">
                     <h3 className="card-title">{title}</h3>
-                    <p className="card-price">R$ {price.toFixed(2)}</p>
+                    <p className="card-price">
+                        R$ {price.toFixed(2).replace('.', ',')}
+                    </p>
                 </div>
 
                 <div className="card-actions">
